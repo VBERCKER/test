@@ -1,0 +1,52 @@
+<%- include("template/header.ejs")%>
+
+
+    <H1> Bonjour, <%= nom2 %>. Il est temps d'écrire un article. </H1>
+
+<div class="creation"> 
+    <form action="/articles" method="post">
+        <input type="submit" name= "creation " value="Ecrire un article ? ">
+    </form>
+    <form action="/home" method="post">
+        <input type="number" name="articles" placeholder="ecrire le numero de l'article ici">
+        <input type="submit" name="supp" value="suprimer un article ">
+        
+    </form>
+  
+</div>
+
+    <div class="articles">
+
+       <form action="/page" %> method="post">
+        <input type="submit">
+
+      <%if(nom.length ===0 ){%>
+           
+        <h2> Il n'ya pas encore d'articles ! </h2>
+     <% }else {%>
+        <ol>
+
+            <%for (i =0 ; i < nom.length; i++){ %>
+            
+           <li class="liste"><a href="/page" class="liste1" name=""+ <%=[i] %> >Nom de l'article : <%= nom[i] %> / sujet de l'article : <%= sujet1[i] %>
+
+         <%};%>
+         </ol>
+        </form>
+
+       
+
+      <%}%>
+
+      <div id="output"></div>
+      <script src="ejs.min.js"></script>
+      <script>
+        let people = ['geddy', 'neil', 'alex'],
+            html = ejs.render('<%= people.join(", "); %>', {people: people});
+        // With jQuery:
+        </script>
+      
+    </div>
+    
+   
+    <%- include("template/footer.ejs")%>

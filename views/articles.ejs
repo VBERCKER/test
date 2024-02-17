@@ -1,0 +1,26 @@
+<%- include("template/header.ejs")%>
+
+<H1> Ecrire un article ! </H1>
+
+<form action="/home" method="post">
+
+
+    <label for="nom article">Nom de l'article :</label>
+    <input type="text" class="article-nom" name="nom">
+
+    <label for="subjet">Sujet de l'articles est : </label>
+    <input type="text" name="subjet" class="subject">
+
+    <label for="auteur">Sujet de l'articles est : </label>
+    <input type="text" name="auteur" class="auteur">
+
+    <label for="corps-article">Votre articles : </label>
+    <input type="text" class="corps-article" name = "corps-article">
+
+
+    <input type="submit" value="soumettre l'article" >
+
+ 
+</form>
+
+<%- include("template/footer.ejs")%>

@@ -52,7 +52,8 @@ app.get("/page" ,(req,res)=>{
 //page home affiche le nom de l'article etc 
 app.post("/home", (req,res)=>{
 
-      // nom utilisateur 
+      // nom utilisateur test
+    
     
        if(nom2.length===0){
         nom2.push(req.body["nom1"]);
